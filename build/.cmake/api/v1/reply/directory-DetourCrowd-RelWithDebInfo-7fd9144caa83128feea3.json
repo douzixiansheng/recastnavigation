@@ -1,0 +1,66 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"DetourCrowd/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"DetourCrowd/RelWithDebInfo/DetourCrowd.lib"
+			],
+			"targetId" : "DetourCrowd::@d390c63f21d3b25443dd",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/recastnavigation",
+			"paths" : 
+			[
+				"DetourCrowd/Include/DetourCrowd.h",
+				"DetourCrowd/Include/DetourLocalBoundary.h",
+				"DetourCrowd/Include/DetourObstacleAvoidance.h",
+				"DetourCrowd/Include/DetourPathCorridor.h",
+				"DetourCrowd/Include/DetourPathQueue.h",
+				"DetourCrowd/Include/DetourProximityGrid.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "DetourCrowd",
+		"source" : "DetourCrowd"
+	}
+}

@@ -30,13 +30,13 @@
 
 //#define DT_VIRTUAL_QUERYFILTER 1
 
-/// Defines polygon filtering and traversal costs for navigation mesh query operations.
+/// Defines polygon filtering and traversal costs for navigation mesh query operations. 定义导航网格查询操作的多边形过滤和遍历成本
 /// @ingroup detour
 class dtQueryFilter
 {
-	float m_areaCost[DT_MAX_AREAS];		///< Cost per area type. (Used by default implementation.)
-	unsigned short m_includeFlags;		///< Flags for polygons that can be visited. (Used by default implementation.)
-	unsigned short m_excludeFlags;		///< Flags for polygons that should not be visted. (Used by default implementation.)
+	float m_areaCost[DT_MAX_AREAS];		///< Cost per area type. (Used by default implementation.) 每个区域类型的成本。(默认实现使用。)
+	unsigned short m_includeFlags;		///< Flags for polygons that can be visited. (Used by default implementation.) 可以访问的多边形的标志
+	unsigned short m_excludeFlags;		///< Flags for polygons that should not be visted. (Used by default implementation.) 不应该访问的多边形的标志
 	
 public:
 	dtQueryFilter();
@@ -45,7 +45,7 @@ public:
 	virtual ~dtQueryFilter() { }
 #endif
 	
-	/// Returns true if the polygon can be visited.  (I.e. Is traversable.)
+	/// Returns true if the polygon can be visited.  (I.e. Is traversable.) 如果可以访问该多边形，则返回true
 	///  @param[in]		ref		The reference id of the polygon test.
 	///  @param[in]		tile	The tile containing the polygon.
 	///  @param[in]		poly  The polygon to test.
@@ -97,20 +97,22 @@ public:
 	///  @param[in]		cost	The new cost of traversing the area.
 	inline void setAreaCost(const int i, const float cost) { m_areaCost[i] = cost; } 
 
-	/// Returns the include flags for the filter.
+	/// Returns the include flags for the filter. 返回筛选器的包含标志。
 	/// Any polygons that include one or more of these flags will be
-	/// included in the operation.
+	/// included in the operation. 包含一个或多个这些标志的任何多边形都将包含在操作中。
 	inline unsigned short getIncludeFlags() const { return m_includeFlags; }
 
+	/// 设置过滤器的包含标志
 	/// Sets the include flags for the filter.
 	/// @param[in]		flags	The new flags.
 	inline void setIncludeFlags(const unsigned short flags) { m_includeFlags = flags; }
 
-	/// Returns the exclude flags for the filter.
+	/// Returns the exclude flags for the filter. 返回筛选器的排除标志。
 	/// Any polygons that include one ore more of these flags will be
-	/// excluded from the operation.
+	/// excluded from the operation. 任何包含一个或多个这些标志的多边形都将被排除在操作之外。
 	inline unsigned short getExcludeFlags() const { return m_excludeFlags; }
 
+	/// 为筛选器设置排除标志。
 	/// Sets the exclude flags for the filter.
 	/// @param[in]		flags		The new flags.
 	inline void setExcludeFlags(const unsigned short flags) { m_excludeFlags = flags; }	
@@ -177,14 +179,14 @@ public:
 	/// @name Standard Pathfinding Functions
 	// /@{
 
-	/// Finds a path from the start polygon to the end polygon.
+	/// Finds a path from the start polygon to the end polygon. 查找从开始多边形到结束多边形的路径
 	///  @param[in]		startRef	The refrence id of the start polygon.
 	///  @param[in]		endRef		The reference id of the end polygon.
 	///  @param[in]		startPos	A position within the start polygon. [(x, y, z)]
 	///  @param[in]		endPos		A position within the end polygon. [(x, y, z)]
-	///  @param[in]		filter		The polygon filter to apply to the query.
+	///  @param[in]		filter		The polygon filter to apply to the query. 要应用于查询的多边形过滤器
 	///  @param[out]	path		An ordered list of polygon references representing the path. (Start to end.) 
-	///  							[(polyRef) * @p pathCount]
+	///  							[(polyRef) * @p pathCount] 表示路径的多边形引用的有序列表
 	///  @param[out]	pathCount	The number of polygons returned in the @p path array.
 	///  @param[in]		maxPath		The maximum number of polygons the @p path array can hold. [Limit: >= 1]
 	dtStatus findPath(dtPolyRef startRef, dtPolyRef endRef,
@@ -312,15 +314,15 @@ public:
 	/// @name Local Query Functions
 	///@{
 
-	/// Finds the polygon nearest to the specified center point.
+	/// Finds the polygon nearest to the specified center point. 找到最接近指定中心点的多边形。
 	/// [opt] means the specified parameter can be a null pointer, in that case the output parameter will not be set.
-	///
-	///  @param[in]		center		The center of the search box. [(x, y, z)]
-	///  @param[in]		halfExtents	The search distance along each axis. [(x, y, z)]
-	///  @param[in]		filter		The polygon filter to apply to the query.
-	///  @param[out]	nearestRef	The reference id of the nearest polygon. Will be set to 0 if no polygon is found.
-	///  @param[out]	nearestPt	The nearest point on the polygon. Unchanged if no polygon is found. [opt] [(x, y, z)]
-	/// @returns The status flags for the query.
+	///       表示指定的参数可以是空指针，在这种情况下输出参数将不会被设置。
+	///  @param[in]		center		The center of the search box. [(x, y, z)] 搜索框的中心
+	///  @param[in]		halfExtents	The search distance along each axis. [(x, y, z)] 每条轴上的搜索距离
+	///  @param[in]		filter		The polygon filter to apply to the query. 要应用于查询的多边形过滤器
+	///  @param[out]	nearestRef	The reference id of the nearest polygon. Will be set to 0 if no polygon is found. 最近多边形的引用id。如果没有找到多边形，将设置为0。
+	///  @param[out]	nearestPt	The nearest point on the polygon. Unchanged if no polygon is found. [opt] [(x, y, z)] 多边形上最近的点。如果没有发现多边形则不变
+	/// @returns The status flags for the query. 查询的状态标志
 	dtStatus findNearestPoly(const float* center, const float* halfExtents,
 							 const dtQueryFilter* filter,
 							 dtPolyRef* nearestRef, float* nearestPt) const;
@@ -334,6 +336,7 @@ public:
 	///  @param[out]	nearestRef	The reference id of the nearest polygon. Will be set to 0 if no polygon is found.
 	///  @param[out]	nearestPt	The nearest point on the polygon. Unchanged if no polygon is found. [opt] [(x, y, z)]
 	///  @param[out]	isOverPoly 	Set to true if the point's X/Z coordinate lies inside the polygon, false otherwise. Unchanged if no polygon is found. [opt]
+	///                             如果点的X/Z坐标位于多边形内，则设置为true，否则设置为false。如果没有发现多边形则不变
 	/// @returns The status flags for the query.
 	dtStatus findNearestPoly(const float* center, const float* halfExtents,
 							 const dtQueryFilter* filter,

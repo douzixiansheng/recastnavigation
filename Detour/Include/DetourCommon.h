@@ -27,12 +27,14 @@
 
 Members in this module are used to create, manipulate, and query navigation 
 meshes.
+此模块中的成员用于创建、操作和查询导航网格。
 
 @note This is a summary list of members.  Use the index or search 
 feature to find minor members.
+这是一个成员的汇总列表。使用索引或搜索功能来查找次要成员。
 */
 
-/// @name General helper functions
+/// @name General helper functions 一般的辅助函数
 /// @{
 
 /// Used to ignore a function parameter.  VS complains about unused parameters
@@ -78,6 +80,7 @@ template<class T> inline T dtClamp(T v, T mn, T mx) { return v < mn ? mn : (v > 
 /// @name Vector helper functions.
 /// @{
 
+/// 求两个向量的外积
 /// Derives the cross product of two vectors. (@p v1 x @p v2)
 ///  @param[out]	dest	The cross product. [(x, y, z)]
 ///  @param[in]		v1		A Vector [(x, y, z)]
@@ -89,6 +92,7 @@ inline void dtVcross(float* dest, const float* v1, const float* v2)
 	dest[2] = v1[0]*v2[1] - v1[1]*v2[0]; 
 }
 
+/// 求两个向量的点积
 /// Derives the dot product of two vectors. (@p v1 . @p v2)
 ///  @param[in]		v1	A Vector [(x, y, z)]
 ///  @param[in]		v2	A vector [(x, y, z)]
@@ -98,6 +102,7 @@ inline float dtVdot(const float* v1, const float* v2)
 	return v1[0]*v2[0] + v1[1]*v2[1] + v1[2]*v2[2];
 }
 
+/// 执行按比例进行的向量相加
 /// Performs a scaled vector addition. (@p v1 + (@p v2 * @p s))
 ///  @param[out]	dest	The result vector. [(x, y, z)]
 ///  @param[in]		v1		The base vector. [(x, y, z)]
@@ -110,6 +115,7 @@ inline void dtVmad(float* dest, const float* v1, const float* v2, const float s)
 	dest[2] = v1[2]+v2[2]*s;
 }
 
+/// 在两个向量之间执行线性插值
 /// Performs a linear interpolation between two vectors. (@p v1 toward @p v2)
 ///  @param[out]	dest	The result vector. [(x, y, x)]
 ///  @param[in]		v1		The starting vector.
@@ -122,6 +128,7 @@ inline void dtVlerp(float* dest, const float* v1, const float* v2, const float t
 	dest[2] = v1[2]+(v2[2]-v1[2])*t;
 }
 
+/// 执行向量加法
 /// Performs a vector addition. (@p v1 + @p v2)
 ///  @param[out]	dest	The result vector. [(x, y, z)]
 ///  @param[in]		v1		The base vector. [(x, y, z)]
@@ -133,6 +140,7 @@ inline void dtVadd(float* dest, const float* v1, const float* v2)
 	dest[2] = v1[2]+v2[2];
 }
 
+/// 执行矢量减法
 /// Performs a vector subtraction. (@p v1 - @p v2)
 ///  @param[out]	dest	The result vector. [(x, y, z)]
 ///  @param[in]		v1		The base vector. [(x, y, z)]
@@ -144,6 +152,7 @@ inline void dtVsub(float* dest, const float* v1, const float* v2)
 	dest[2] = v1[2]-v2[2];
 }
 
+/// 按指定的值缩放向量
 /// Scales the vector by the specified value. (@p v * @p t)
 ///  @param[out]	dest	The result vector. [(x, y, z)]
 ///  @param[in]		v		The vector to scale. [(x, y, z)]
@@ -155,6 +164,7 @@ inline void dtVscale(float* dest, const float* v, const float t)
 	dest[2] = v[2]*t;
 }
 
+/// 从指定的向量中选择每个元素的最小值。
 /// Selects the minimum value of each element from the specified vectors.
 ///  @param[in,out]	mn	A vector.  (Will be updated with the result.) [(x, y, z)]
 ///  @param[in]	v	A vector. [(x, y, z)]
@@ -165,6 +175,7 @@ inline void dtVmin(float* mn, const float* v)
 	mn[2] = dtMin(mn[2], v[2]);
 }
 
+/// 从指定的向量中选择每个元素的最大值
 /// Selects the maximum value of each element from the specified vectors.
 ///  @param[in,out]	mx	A vector.  (Will be updated with the result.) [(x, y, z)]
 ///  @param[in]		v	A vector. [(x, y, z)]
@@ -175,6 +186,7 @@ inline void dtVmax(float* mx, const float* v)
 	mx[2] = dtMax(mx[2], v[2]);
 }
 
+/// 将向量元素设置为指定的值。
 /// Sets the vector elements to the specified values.
 ///  @param[out]	dest	The result vector. [(x, y, z)]
 ///  @param[in]		x		The x-value of the vector.
@@ -185,6 +197,7 @@ inline void dtVset(float* dest, const float x, const float y, const float z)
 	dest[0] = x; dest[1] = y; dest[2] = z;
 }
 
+/// 执行向量复制
 /// Performs a vector copy.
 ///  @param[out]	dest	The result. [(x, y, z)]
 ///  @param[in]		a		The vector to copy. [(x, y, z)]
@@ -195,6 +208,7 @@ inline void dtVcopy(float* dest, const float* a)
 	dest[2] = a[2];
 }
 
+/// 派生向量的标量长度。
 /// Derives the scalar length of the vector.
 ///  @param[in]		v The vector. [(x, y, z)]
 /// @return The scalar length of the vector.
@@ -203,6 +217,7 @@ inline float dtVlen(const float* v)
 	return dtMathSqrtf(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
 }
 
+/// 派生向量的标量长度的平方
 /// Derives the square of the scalar length of the vector. (len * len)
 ///  @param[in]		v The vector. [(x, y, z)]
 /// @return The square of the scalar length of the vector.

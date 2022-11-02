@@ -1,0 +1,64 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"DebugUtils/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"DebugUtils/MinSizeRel/DebugUtils.lib"
+			],
+			"targetId" : "DebugUtils::@70086530efcf9f3aa15a",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/recastnavigation",
+			"paths" : 
+			[
+				"DebugUtils/Include/DebugDraw.h",
+				"DebugUtils/Include/DetourDebugDraw.h",
+				"DebugUtils/Include/RecastDebugDraw.h",
+				"DebugUtils/Include/RecastDump.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "DebugUtils",
+		"source" : "DebugUtils"
+	}
+}

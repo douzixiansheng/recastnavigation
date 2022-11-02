@@ -1,0 +1,10 @@
+^D:\JIHUANG\RECASTNAVIGATION\RECASTDEMO\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/jihuang/recastnavigation -BD:/jihuang/recastnavigation/build --check-stamp-file D:/jihuang/recastnavigation/build/RecastDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

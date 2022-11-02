@@ -1,0 +1,85 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"Detour/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"Detour/Debug/Detour-d.lib"
+			],
+			"targetId" : "Detour::@af02d6d6a7de8e2ccf3d",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/recastnavigation",
+			"paths" : 
+			[
+				"Detour/Include/DetourAlloc.h",
+				"Detour/Include/DetourAssert.h",
+				"Detour/Include/DetourCommon.h",
+				"Detour/Include/DetourMath.h",
+				"Detour/Include/DetourNavMesh.h",
+				"Detour/Include/DetourNavMeshBuilder.h",
+				"Detour/Include/DetourNavMeshQuery.h",
+				"Detour/Include/DetourNode.h",
+				"Detour/Include/DetourStatus.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"build/Detour/Debug/Detour-d.pdb"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "Detour",
+		"source" : "Detour"
+	}
+}

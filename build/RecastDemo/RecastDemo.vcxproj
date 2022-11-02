@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5A44BD71-1DC3-3D11-97B7-57AC3B602486}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>RecastDemo</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\jihuang\recastnavigation\build\RecastDemo\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RecastDemo.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RecastDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\jihuang\recastnavigation\build\RecastDemo\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RecastDemo.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RecastDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\jihuang\recastnavigation\build\RecastDemo\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RecastDemo.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RecastDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\jihuang\recastnavigation\build\RecastDemo\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RecastDemo.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RecastDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/fastlz" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/lib/x64/SDL2.dll D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/Meshes D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/Meshes
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/TestCases D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/TestCases
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Bin/DroidSans.ttf D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\DebugUtils\Debug\DebugUtils-d.lib;..\Detour\Debug\Detour-d.lib;..\DetourCrowd\Debug\DetourCrowd-d.lib;..\DetourTileCache\Debug\DetourTileCache-d.lib;..\Recast\Debug\Recast-d.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2main.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2.lib;..\Detour\Debug\Detour-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/jihuang/recastnavigation/build/RecastDemo/Debug/RecastDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/jihuang/recastnavigation/build/RecastDemo/Debug/RecastDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/fastlz" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/lib/x64/SDL2.dll D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/Meshes D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/Meshes
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/TestCases D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/TestCases
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Bin/DroidSans.ttf D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\DebugUtils\Release\DebugUtils.lib;..\Detour\Release\Detour.lib;..\DetourCrowd\Release\DetourCrowd.lib;..\DetourTileCache\Release\DetourTileCache.lib;..\Recast\Release\Recast.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2main.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2.lib;..\Detour\Release\Detour.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/jihuang/recastnavigation/build/RecastDemo/Release/RecastDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/jihuang/recastnavigation/build/RecastDemo/Release/RecastDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/fastlz" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/lib/x64/SDL2.dll D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/Meshes D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/Meshes
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/TestCases D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/TestCases
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Bin/DroidSans.ttf D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\DebugUtils\MinSizeRel\DebugUtils.lib;..\Detour\MinSizeRel\Detour.lib;..\DetourCrowd\MinSizeRel\DetourCrowd.lib;..\DetourTileCache\MinSizeRel\DetourTileCache.lib;..\Recast\MinSizeRel\Recast.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2main.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2.lib;..\Detour\MinSizeRel\Detour.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/jihuang/recastnavigation/build/RecastDemo/MinSizeRel/RecastDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/jihuang/recastnavigation/build/RecastDemo/MinSizeRel/RecastDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/fastlz" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib" /external:I "D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\jihuang\recastnavigation\RecastDemo\..\DebugUtils\Include;D:\jihuang\recastnavigation\RecastDemo\..\Detour\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\..\DetourTileCache\Include;D:\jihuang\recastnavigation\RecastDemo\..\Recast\Include;D:\jihuang\recastnavigation\RecastDemo\Include;D:\jihuang\recastnavigation\DebugUtils\Include;D:\jihuang\recastnavigation\Recast\Include;D:\jihuang\recastnavigation\Detour\Include;D:\jihuang\recastnavigation\DetourTileCache\Include;D:\jihuang\recastnavigation\DetourCrowd\Include;D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz;D:\jihuang\recastnavigation\RecastDemo\Contrib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Contrib/SDL/lib/x64/SDL2.dll D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/Meshes D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/Meshes
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory D:/jihuang/recastnavigation/RecastDemo/Bin/TestCases D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/TestCases
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy D:/jihuang/recastnavigation/RecastDemo/Bin/DroidSans.ttf D:/jihuang/recastnavigation/build/RecastDemo/$(ConfigurationName)/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\DebugUtils\RelWithDebInfo\DebugUtils.lib;..\Detour\RelWithDebInfo\Detour.lib;..\DetourCrowd\RelWithDebInfo\DetourCrowd.lib;..\DetourTileCache\RelWithDebInfo\DetourTileCache.lib;..\Recast\RelWithDebInfo\Recast.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2main.lib;D:\jihuang\recastnavigation\RecastDemo\Contrib\SDL\lib\x64\SDL2.lib;..\Detour\RelWithDebInfo\Detour.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/jihuang/recastnavigation/build/RecastDemo/RelWithDebInfo/RecastDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/jihuang/recastnavigation/build/RecastDemo/RelWithDebInfo/RecastDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\jihuang\recastnavigation\RecastDemo\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/jihuang/recastnavigation/RecastDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/jihuang/recastnavigation -BD:/jihuang/recastnavigation/build --check-stamp-file D:/jihuang/recastnavigation/build/RecastDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;D:\jihuang\recastnavigation\RecastDemo\cmake\FindSDL2.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\jihuang\recastnavigation\build\RecastDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/jihuang/recastnavigation/RecastDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/jihuang/recastnavigation -BD:/jihuang/recastnavigation/build --check-stamp-file D:/jihuang/recastnavigation/build/RecastDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;D:\jihuang\recastnavigation\RecastDemo\cmake\FindSDL2.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\jihuang\recastnavigation\build\RecastDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/jihuang/recastnavigation/RecastDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/jihuang/recastnavigation -BD:/jihuang/recastnavigation/build --check-stamp-file D:/jihuang/recastnavigation/build/RecastDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;D:\jihuang\recastnavigation\RecastDemo\cmake\FindSDL2.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\jihuang\recastnavigation\build\RecastDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/jihuang/recastnavigation/RecastDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/jihuang/recastnavigation -BD:/jihuang/recastnavigation/build --check-stamp-file D:/jihuang/recastnavigation/build/RecastDemo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPkgConfig.cmake;D:\jihuang\recastnavigation\RecastDemo\cmake\FindSDL2.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\jihuang\recastnavigation\build\RecastDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Contrib\fastlz\fastlz.c" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\ChunkyTriMesh.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\ConvexVolumeTool.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\CrowdTool.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\Filelist.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\InputGeom.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\MeshLoaderObj.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\NavMeshPruneTool.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\NavMeshTesterTool.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\OffMeshConnectionTool.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\PerfTimer.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\Sample.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\SampleInterfaces.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\Sample_Debug.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\Sample_SoloMesh.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\Sample_TempObstacles.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\Sample_TileMesh.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\TestCase.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\ValueHistory.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\imgui.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\imguiRenderGL.cpp" />
+    <ClCompile Include="D:\jihuang\recastnavigation\RecastDemo\Source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\jihuang\recastnavigation\build\ZERO_CHECK.vcxproj">
+      <Project>{EC4ACEBA-4881-3202-83CF-9ADE7DEF3F12}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\jihuang\recastnavigation\build\DebugUtils\DebugUtils.vcxproj">
+      <Project>{33C83657-7501-312A-95A4-C63185E39BF9}</Project>
+      <Name>DebugUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\jihuang\recastnavigation\build\Detour\Detour.vcxproj">
+      <Project>{6AB2CDBF-C86C-3EC4-844C-39D992B863A6}</Project>
+      <Name>Detour</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\jihuang\recastnavigation\build\DetourCrowd\DetourCrowd.vcxproj">
+      <Project>{B5800D86-7546-3B83-A2C2-6AC08D78416B}</Project>
+      <Name>DetourCrowd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\jihuang\recastnavigation\build\DetourTileCache\DetourTileCache.vcxproj">
+      <Project>{1A02E878-2530-3D69-89B6-5F6B9760B573}</Project>
+      <Name>DetourTileCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\jihuang\recastnavigation\build\Recast\Recast.vcxproj">
+      <Project>{2D4AFAB3-B908-31C4-994C-A57E2011A5EB}</Project>
+      <Name>Recast</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
